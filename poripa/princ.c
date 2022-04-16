@@ -6,7 +6,7 @@ int main(){
     float pre2=0,svalor[25],uni[25];
     
     char nome[6][20]={"n","pao de forma  ","pao de centeio","broa de milhon","sonho         ","tubaina       "};
-    int nome2[25];
+    int nome1[25];
 
     
      
@@ -102,7 +102,7 @@ int main(){
         pre2+=pre;
         svalor[item]+=pre;
         quant2[item]=quant;
-        nome2[item]=opc;
+        nome1[item]=opc;
         
         
         
@@ -114,7 +114,7 @@ int main(){
     system("clear");
 
     for(i=1;i<=item;i++){
-            printf("\titems=%d\tnome=%s \tpreco unitario=R$%0.2f\tquantidade=%d\tsub valor=R$%0.2f\n ",i,nome[nome2[i]],uni[i],quant2[i],svalor[i]);
+            printf("\titems=%d\tnome=%s \tpreco unitario=R$%0.2f\tquantidade=%d\tsub valor=R$%0.2f\n ",i,nome[nome1[i]],uni[i],quant2[i],svalor[i]);
     }
         printf("\n\t\t\t\t\tvalor total=R$%0.2f",pre2);
             break;
@@ -128,7 +128,7 @@ int main(){
             break;
         }
         
-        printf("\nvoltar");
+        printf("\n\nvoltar");
         scanf("%d",&opc);
     }while(opc==1);
     return 0;
