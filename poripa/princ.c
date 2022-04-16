@@ -31,7 +31,7 @@ int main(){
         float pre; 
         item++;
         system("clear");
-        prntf("------------------");
+        printf("------------------");
         printf("1-pao de forma=R$7.50\n2-pao de centeio=R$8.69\n3-broa de milho=R$5.00\n4-sonho=R$4.50\n5-tubaina=R$3.25\nescolha="); 
         scanf("%d",&opc);
         getchar();
