@@ -28,10 +28,8 @@ int main(){
           
       do{ 
         int num=0; 
-        float pre; 
-        item++;
+        float pre=0; 
         system("clear");
-        prntf("------------------");
         printf("1-pao de forma=R$7.50\n2-pao de centeio=R$8.69\n3-broa de milho=R$5.00\n4-sonho=R$4.50\n5-tubaina=R$3.25\nescolha="); 
         scanf("%d",&opc);
         getchar();
@@ -45,11 +43,15 @@ int main(){
                
                 if(quant>pf){
                     printf(" excedeu o limite de %d \n",pf);
+                    scanf("opc");
+                    opc=1;
+                    continue;
                     } else{
                         num=pf;
                         num-=quant;  
                     printf("vc quer=%d ",quant);
                         pf=num;
+                        item++;
                     }
                     pre=7.50;
                 break;
@@ -62,6 +64,7 @@ int main(){
                         num-=quant;  
                     printf("vc quer=%d ",quant);
                         pc=num;
+                        item++;
                     }
                 break;
             case 3:
@@ -73,6 +76,7 @@ int main(){
                         num-=quant;  
                     printf("vc quer=%d ",quant);
                         br=num;
+                        item++;
                     }
                 break;
             case 4:
@@ -84,6 +88,7 @@ int main(){
                         num-=quant;  
                     printf("vc quer=%d ",quant);
                         so=num;
+                        item++;
                     }
                 break;
             case 5:
@@ -95,12 +100,13 @@ int main(){
                         num-=quant;  
                     printf("vc quer=%d ",quant);
                         tu=num;
+                        item++;
                     }
                 break;
         }
         uni[item]=pre;
         pre*=quant;
-        pre2+=pre;
+        pre2+=pre;  
         svalor[item]+=pre;
         quant2[item]=quant;
         nome3[item]=opc;
@@ -113,7 +119,9 @@ int main(){
 
     }while(opc==1);  
     system("clear");
-
+    // for(i=0;i<=5;i++){
+    //     printf("%f\n",svalor[i]);
+    // }
     for(i=1;i<=item;i++){
             printf("\titems=%d\tnome=%s \tpreco unitario=R$%0.2f\tquantidade=%d\tsub valor=R$%0.2f\n ",i,nome[nome3[i]],uni[i],quant2[i],svalor[i]);
     }
