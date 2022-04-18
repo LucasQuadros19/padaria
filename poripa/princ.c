@@ -4,12 +4,8 @@
 int main(){
     int pf=10,pc=20,br=5,so=30,tu=50,quant=0,quant2[25],opc=0,pre=0,i=0,item=0;
     float pre2=0,svalor[25],uni[25];
-    
     char nome[6][20]={"n","pao de forma  ","pao de centeio","broa de milhon","sonho         ","tubaina       "};
     int nome3[25];
-
-    
-     
     // struct menu_compras{
     //         //  char nome[5][10]={"pao de forma","pao de centeio"};
     //         //  float svalor[25];                                          ------------em desenvolvimento----------
@@ -23,9 +19,7 @@ int main(){
         scanf("%d",&opc);
         getchar();
         switch (opc){
-        case 1: 
-         
-          
+        case 1:   
       do{ 
         int num=0; 
         float pre=0; 
@@ -110,20 +104,15 @@ int main(){
         svalor[item]+=pre;
         quant2[item]=quant;
         nome3[item]=opc;
-        
-        
-        
         printf("\npedir de novo=");
         scanf("%d",&opc);
-        
-
     }while(opc==1);  
     system("clear");
     // for(i=0;i<=5;i++){
     //     printf("%f\n",svalor[i]);
     // }
     for(i=1;i<=item;i++){
-            printf("\titems=%d\tnome=%s \tpreco unitario=R$%0.2f\tquantidade=%d\tsub valor=R$%0.2f\n ",i,nome[nome3[i]],uni[i],quant2[i],svalor[i]);
+            printf("\titems=%d\tnome=%s \tpreco unitario=R$%0.2f\tquantidade=%d\tsub-valor=R$%0.2f\n ",i,nome[nome3[i]],uni[i],quant2[i],svalor[i]);
     }
         printf("\n\t\t\t\t\tvalor total=R$%0.2f",pre2);
             break;
@@ -135,8 +124,7 @@ int main(){
         
         default:
             break;
-        }
-        
+        }    
         printf("\n\nvoltar");
         scanf("%d",&opc);
     }while(opc==1);
